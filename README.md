@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+## Packages used here
+
+- three js [Angular Library](https://angularthree.org/) [JS Library](https://threejs.org/)
+- canon js [Github](https://github.com/pmndrs/cannon-es)
+
+Three is for rendering while canon is used for physics.

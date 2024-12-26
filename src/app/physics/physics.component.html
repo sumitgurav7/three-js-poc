@@ -1,0 +1,19 @@
+
+<ngt-ambient-light />
+    <ngt-directional-light [position]="10" [castShadow]="true">
+      <ngt-vector2 *args="[2048, 2048]" attach="shadow.mapSize" />
+    </ngt-directional-light>
+<ngtc-physics>
+
+  <app-plane/>
+  @for (position of cubePositions; track $index) {
+    <app-box [position]="position" />
+  }
+
+
+</ngtc-physics>
+
+
+<ngt-orbit-controls *args="[camera(), glDomElement()]" />
+<ngt-grid-helper />
+<ngt-axis-helper />

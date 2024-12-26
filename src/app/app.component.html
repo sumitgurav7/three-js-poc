@@ -1,3 +1,35 @@
+@if (sceneGraphValue == 'venila') {
+<h1 style="color: wheat">Venila</h1>
+<div class="canvas-container">
+  <ngt-canvas [sceneGraph]="vanilaGraph" />
+</div>
+} @else if (sceneGraphValue == 'scene-graph') {
+<h1 style="color: wheat">Scene</h1>
 <div class="canvas-container">
   <ngt-canvas [sceneGraph]="sceneGraph" />
 </div>
+} @else if (sceneGraphValue == 'physics') {
+<h1 style="color: wheat">Physics</h1>
+<div class="canvas-container">
+  <ngt-canvas
+    [sceneGraph]="physicsGraph"
+    [camera]="{ position: [-1, 5, 5], fov: 45 }"
+    [shadows]="true"
+    [dpr]="[1, 2]"
+    [gl]="{ alpha: false }"
+  />
+</div>
+} @else {
+<div class="canvas-container">
+  <h1 style="color: wheat">Select a scene graph</h1>
+</div>
+}
+
+<select
+  [(ngModel)]="sceneGraphValue"
+  (ngModelChange)="sceneGraphChange($event)"
+>
+  <option value="scene-graph">Scene Graph</option>
+  <option value="venila">Venila</option>
+  <option value="physics">Physics</option>
+</select>
