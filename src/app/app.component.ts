@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { extend, NgtCanvas } from 'angular-three';
 import * as THREE from 'three';
 import { SceneGraphComponent } from './scene-graph/scene-graph.component';
+import { VenilaComponent } from './venila/venila.component';
 
 extend(THREE);
 
