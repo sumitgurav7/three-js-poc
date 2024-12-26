@@ -85,7 +85,7 @@ export class VenilaComponent {
 
 
   initCamera() {
-    this.glDomElement().addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowUp':
           this.camera().position.y += 0.1;
