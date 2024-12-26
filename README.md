@@ -1,62 +1,5 @@
 # ThreeJsPoc
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
 
 ## Packages used here
@@ -65,3 +8,79 @@ For more information on using the Angular CLI, including detailed command refere
 - canon js [Github](https://github.com/pmndrs/cannon-es)
 
 Three is for rendering while canon is used for physics.
+
+
+## Project Overview
+
+This project demonstrates the integration of Three.js with Angular to create a 3D rendering application. It also incorporates Cannon.js for physics simulations, providing a comprehensive example of combining 3D graphics with physics in a web application.
+
+### Key Features
+
+- **3D Rendering**: Utilizes Three.js to render 3D objects and scenes.
+- **Physics Simulation**: Implements physics using Cannon.js for realistic object interactions.
+- **Angular Integration**: Leverages Angular for application structure, data binding, and component-based architecture.
+
+### Project Structure
+
+- **src/app**: Contains the Angular components, services, and modules.
+- **src/assets**: Includes static assets like images and models.
+- **src/environments**: Configuration files for different environments (development, production).
+### Components
+
+- **AppComponent** (`src/app/app.component.ts`): The root component that bootstraps the Angular application.
+- **SceneComponent** (`src/app/scene/scene.component.ts`): Manages the Three.js scene, including camera, lights, and 3D objects.
+- **PhysicsComponent** (`src/app/physics/physics.component.ts`): Handles the integration of Cannon.js for physics simulations.
+- **ModelLoaderComponent** (`src/app/model-loader/model-loader.component.ts`): Responsible for loading and managing 3D models.
+- **ControlComponent** (`src/app/control/control.component.ts`): Provides user controls for interacting with the 3D scene.
+- **EnvironmentComponent** (`src/app/environment/environment.component.ts`): Sets up the environment, including background and lighting.
+### Components Tree
+
+```
+src
+└── app
+  ├── app.component.ts
+  ├── scene
+  │   └── scene.component.ts
+  ├── physics
+  │   └── physics.component.ts
+  ├── model-loader
+  │   └── model-loader.component.ts
+  ├── control
+  │   └── control.component.ts
+  └── environment
+    └── environment.component.ts
+```
+
+
+
+### Getting Started
+
+1. **Clone the repository**:
+  ```bash
+  git clone https://github.com/your-repo/three-js-poc.git
+  cd three-js-poc
+  ```
+
+2. **Install dependencies**:
+  ```bash
+  yarn install
+  ```
+
+3. **Run the development server**:
+  ```bash
+  ng serve
+  ```
+  
+
+### Usage
+
+- **3D Models**: Add your 3D models to the `src/assets/models` directory.
+- **Physics**: Configure physics properties in the relevant Angular services or components.
+
+### Contributing
+
+Contributions are welcome! Please fork the repository and create a pull request with your changes.
+
+### License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

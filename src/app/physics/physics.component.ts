@@ -17,6 +17,8 @@ extend({ OrbitControls });
 })
 export class PhysicsComponent {
 
+  protected readonly Math = Math;
+
   cubePositions: Triplet[] = [
     [0.1, 7, 0],
     [0, 12, -1],

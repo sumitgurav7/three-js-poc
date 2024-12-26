@@ -3,6 +3,17 @@
     <ngt-directional-light [position]="10" [castShadow]="true">
       <ngt-vector2 *args="[2048, 2048]" attach="shadow.mapSize" />
     </ngt-directional-light>
+
+    <ngt-spot-light
+    [position]="[10,10,10]"
+    [intensity]="0.5 * Math.PI"
+    [angle]="15"
+    [penumbra]="1"
+    [decay]="0"
+    [castShadow]="true"
+    ><ngt-vector2 attach="shadow.mapSize" />
+  </ngt-spot-light>
+  <!-- <ngt-point-light [position]="-10" [intensity]="0.5 * Math.PI" [decay]="0" /> -->
 <ngtc-physics>
 
   <app-plane/>
