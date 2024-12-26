@@ -1,6 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { injectBeforeRender, injectStore } from 'angular-three';
 import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
 @Component({
   selector: 'app-venila',
@@ -45,6 +46,8 @@ export class VenilaComponent {
     cube3.position.set(0, 0, 0);
     this.scene().add(cube3);
     this.addRotation(cube3);
+
+    new OrbitControls(this.camera(), this.glDomElement());
     // Add objects to the scene
   }
 
@@ -61,7 +64,7 @@ export class VenilaComponent {
     spotLight.position.set(10, 10, 10);
     spotLight.castShadow = true;
     spotLight.angle = 0.15;
-    spotLight.penumbra = 0.05;
+    spotLight.penumbra = 1;
     spotLight.decay = 0;
     spotLight.intensity = 0.5 * Math.PI;
     return spotLight;
@@ -75,8 +78,8 @@ export class VenilaComponent {
 
   addRotation(mesh: THREE.Mesh<THREE.BoxGeometry, THREE.MeshStandardMaterial, THREE.Object3DEventMap>) {
     injectBeforeRender(() => {
-      mesh.rotation.x += 0.01;
-      mesh.rotation.y += 0.01;
+      mesh.rotation.x += 0.001;
+      mesh.rotation.y += 0.001;
     });
   }
 

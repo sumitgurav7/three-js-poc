@@ -14,5 +14,5 @@ extend(THREE);
 })
 export class AppComponent {
   title = 'three-js-poc';
-  protected sceneGraph = SceneGraphComponent;
+  protected sceneGraph = VenilaComponent;
 }
